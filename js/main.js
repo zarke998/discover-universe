@@ -228,7 +228,7 @@ function generateRandomNumber(from, to) {
     return random;
 }
 function preloadSliderImages(){
-    for(let i = 0; i < 9; i++){
+    for(let i = 1; i<= 9; i++){
         var image = new Image();
         image.src = `images/solar-system/${i}.jpg`;
     }
