@@ -97,7 +97,7 @@ function solarSliderChangeImage() {
         else if (currentImagePosition == 10)
             currentImagePosition = 1;
 
-        slider.style.backgroundImage = `url(../images/solar-system/${currentImagePosition}.jpg)`;
+        slider.style.backgroundImage = `url(images/solar-system/${currentImagePosition}.jpg)`;
         addSliderText(currentImagePosition);
         setTimeout(function () {
             animating = false;
