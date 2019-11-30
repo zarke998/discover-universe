@@ -1,0 +1,297 @@
+$logoBlue : #0570C2;
+
+@font-face{
+    src: url("../fonts/LeelawUI.ttf") format("ttf");
+    font-family: "Leelawadee UI";
+}
+
+html{
+    font-family: "Leelawadee UI" !important;
+}
+
+html, body{
+    height: 100%;
+    color: white;
+}
+nav{
+    line-height: initial;
+}
+
+a:hover{
+    text-decoration: none;
+    color: white;
+}
+div.fullscreen{
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+}
+#introSection{
+    background-image: url("../images/background-intro.jpg");
+    padding-top: 64px;
+}
+#navBar{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: transparent;
+    box-shadow: none;
+    #mobile-menu{
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        i{
+            line-height: 56px;
+        }
+    }
+    .nav-wrapper{
+        margin-top: 20px; //Difference between parent height and this item's height = 27px
+    }
+    a{
+        font-family: "Leelawadee UI" !important;
+    }
+    .brand-logo{
+        font-size: 26px;
+        text-transform: uppercase;
+        span{
+            color: $logoBlue;
+        }
+    }
+    #nav-mobile{
+        li{
+            a{
+                font-size: 18px;
+                &:hover{
+                    color: $logoBlue;
+                }
+            }
+        }
+    }
+
+    
+}
+#introHeadingText{
+    margin-top: 100px;
+
+    h1{
+        font-size: 48px;
+        font-weight: normal;
+    }
+    p{
+        margin-top: 24px;
+        font-size: 26px;
+    }
+}
+#sliderSection{
+    background-image: url("../images/solar-system/1.jpg");
+    transition: 2s;
+
+    #solarSystemSliderText{
+        height: 95%;
+    }
+    .solar-slider-nav{
+        height: 100%;
+        position: absolute;
+        &-arrow{
+            font-size: 36px;
+        }
+        padding: 0px 25px;
+    }
+
+    #solar-slider-nav{
+        &-left{
+            top: 0px;
+            left: 0px;
+            &:hover{
+                background: linear-gradient(90deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 100%);
+            }
+        }
+        &-right{
+            top: 0px;
+            right: 0px;
+            &:hover{
+                background: linear-gradient(-90deg, rgba(0,0,0, 0.6) 0%, rgba(0,0,0,0.3) 100%);
+            }
+        }
+    }
+
+    #planetName{
+        font-size: 42px;
+        display: none;
+    }
+
+    #sliderTextWrapper{
+        padding-top: 3%;
+    }
+    .slider-text{
+        p{
+            font-size: 3vh;
+            margin-bottom: 35px;
+            display: none;
+        }
+    }
+
+    #sliderMobileText{
+        display: none;
+        padding: 0px 75px;
+        p{
+            font-size: 24px;
+        }
+    }
+}
+#meteorSection{
+    background-image: url("../images/background-meteor.jpg");
+    >p, >h2, >div{
+        width: 50%;
+    }
+    >h2{
+        // font-size: 42px;
+        font-size: 5vh;
+    }
+    >p{
+        // font-size: 20px;
+        font-size: 3vh;
+    }
+    #meteorTimerWrapper{
+        font-size: 16px;
+        >p{
+            font-size: 2em;
+        }
+        #meteorTimer{
+            p{
+                font-size: 1em;
+                span{
+                    font-size: 3em;
+                }
+            }
+        }
+    }
+}
+#supernovaSection{
+    background-image: url("../images/background-supernova.jpg");
+    p{
+        font-size: 48px;
+    }
+    img + div{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 1024px){
+    #sliderSection .slider-text{
+        p{
+            // font-size: 20px;
+            font-size: 2.7vh;
+        }
+    }
+    #meteorSection{        
+        >h2,>p, >div{
+            width: 75%;
+        }
+
+    }
+}
+@media screen and (max-width: 886px){
+    #introHeadingText{
+        h1{
+            font-size: 42px;
+        }
+        p{
+            font-size: 22px;
+        }
+    }
+    .slider-text{
+        display: none;
+    }
+    #sliderSection #sliderMobileText{
+        display: block;
+        p{
+            font-size: 18px;
+        }
+    }
+}
+@media screen and (max-width: 768px){
+    #meteorSection{        
+        >h2, >p, >div{
+            width: 100%;
+        }
+
+    }
+}
+@media screen and (max-width: 496px){
+    #meteorSection{
+        >h2{
+            margin-top: 0px !important;
+            margin-bottom: 30px !important;
+            font-size: 28px;
+            // font-size: 5vh;
+            text-align: center;
+        }
+        >p{
+            font-size: 16px;
+            // font-size: 3vh;
+        }
+        #meteorTimerWrapper{
+            font-size: 12px;
+        }
+    }
+}
+@media screen and (max-width: 425px){
+    #introHeadingText{
+        h1{
+            font-size: 36px;
+        }
+        p{
+            font-size: 18px;
+        }
+    }
+    #sliderSection #sliderMobileText{
+        padding: 0px 50px;
+        p{
+            font-size: 16px;
+        }
+    }
+}
+@media screen and (max-width: 375px){
+    #logo{
+        margin-left: 20px;
+    }
+    #meteorSection{
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+
+        >h2{
+            font-size: 22px;
+            // font-size: 5vh;
+        }
+        >p{
+            font-size: 14px;
+            // font-size: 3vh;
+            margin-bottom: 10px !important;
+        }
+    }
+}
+
+// ANIMATIONS
+.shining-star{
+    animation-name: shine;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    &:hover{
+        cursor: pointer;
+    }
+}
+@keyframes shine{
+    from{
+        filter: brightness(0.3);
+    }
+    to{
+        filter: brightness(1.3);
+    }
+}
+// OVERWRITE MATERIALIZE DEFAULTS
+nav .nav-wrapper{
+    position: static;
+}
