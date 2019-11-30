@@ -8,6 +8,7 @@ var supernovaSection;
 var resizeTimer;
 var supernovaData;
 var hostName;
+var sliderImages;
 
 
 $(document).ready(function () {
@@ -42,6 +43,7 @@ $(document).ready(function () {
 
     animateIntroHeading();
 
+    sliderImages = [];
     addSliderText(1);
     preloadSliderImages();
 
@@ -102,6 +104,7 @@ function solarSliderChangeImage() {
         else if (currentImagePosition == 10)
             currentImagePosition = 1;
 
+        console.dir(slider);
         slider.style.backgroundImage = `url(images/solar-system/${currentImagePosition}.jpg)`;
         addSliderText(currentImagePosition);
         setTimeout(function () {
@@ -231,5 +234,6 @@ function preloadSliderImages(){
     for(let i = 1; i<= 9; i++){
         var image = new Image();
         image.src = `images/solar-system/${i}.jpg`;
+        sliderImages.push(image);
     }
 }
