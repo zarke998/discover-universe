@@ -41,7 +41,7 @@ $(document).ready(function () {
     document.getElementById("solar-slider-nav-right").addEventListener("click", solarSliderChangeImage);
 
     animateIntroHeading();
-    
+
     addSliderText(1);
     preloadSliderImages();
 
@@ -102,7 +102,7 @@ function solarSliderChangeImage() {
         else if (currentImagePosition == 10)
             currentImagePosition = 1;
 
-        slider.style.backgroundImage = `url(${hostName}images/solar-system/${currentImagePosition}.jpg)`;
+        slider.style.backgroundImage = `url(images/solar-system/${currentImagePosition}.jpg)`;
         addSliderText(currentImagePosition);
         setTimeout(function () {
             animating = false;
@@ -230,6 +230,6 @@ function generateRandomNumber(from, to) {
 function preloadSliderImages(){
     for(let i = 0; i < 9; i++){
         var image = new Image();
-        image.src = `${hostName}images/solar-system/${i}.jpg`;
+        image.src = `images/solar-system/${i}.jpg`;
     }
 }
