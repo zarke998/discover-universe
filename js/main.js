@@ -7,10 +7,13 @@ var meteorTimer;
 var supernovaSection;
 var resizeTimer;
 var supernovaData;
+var hostName;
 
 
 $(document).ready(function () {
     $('.sidenav').sidenav();
+
+    hostName = window.location.hostname + '/discover-universe/';
 
     currentImagePosition = 1;
     animating = false;
@@ -38,7 +41,9 @@ $(document).ready(function () {
     document.getElementById("solar-slider-nav-right").addEventListener("click", solarSliderChangeImage);
 
     animateIntroHeading();
+    
     addSliderText(1);
+    preloadSliderImages();
 
     meteorTimer = $("#meteorTimer");
     endDate = new Date("2020-04-21");
@@ -97,7 +102,7 @@ function solarSliderChangeImage() {
         else if (currentImagePosition == 10)
             currentImagePosition = 1;
 
-        slider.style.backgroundImage = `url(images/solar-system/${currentImagePosition}.jpg)`;
+        slider.style.backgroundImage = `url(${hostName}images/solar-system/${currentImagePosition}.jpg)`;
         addSliderText(currentImagePosition);
         setTimeout(function () {
             animating = false;
@@ -221,4 +226,10 @@ function createShiningStar(width, height) {
 function generateRandomNumber(from, to) {
     var random = Math.floor(Math.random() * (to - from + 1) + from);
     return random;
+}
+function preloadSliderImages(){
+    for(let i = 0; i < 9; i++){
+        var image = new Image();
+        image.src = `${hostName}images/solar-system/${i}.jpg`;
+    }
 }
