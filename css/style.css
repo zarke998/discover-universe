@@ -91,7 +91,7 @@ div.fullscreen {
 }
 
 #sliderSection {
-  background: url("../images/solar-system/1.jpg") center center/cover;
+  background: url("images/solar-system/1.jpg") center center/cover;
   -webkit-transition: 2s;
   transition: 2s;
 }
@@ -258,6 +258,9 @@ div.fullscreen {
   }
   #sliderSection #sliderMobileText p {
     font-size: 16px;
+  }
+  #supernovaSection p {
+    font-size: 36px;
   }
 }
 
