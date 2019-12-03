@@ -1,4 +1,8 @@
 $logoBlue : #0570C2;
+$twitterBlue: #1DA1F2;
+$instagramPink: #d10085;
+$youtubeRed: #FF0000;
+$twitchPurple: #6441a5;
 
 @font-face{
     src: url("../fonts/LeelawUI.ttf") format("ttf");
@@ -12,14 +16,19 @@ html{
 html, body{
     height: 100%;
     color: white;
+
+    overflow-x: hidden;
 }
 nav{
     line-height: initial;
 }
 
-a:hover{
-    text-decoration: none;
+a{
     color: white;
+    &:hover{
+    text-decoration: none;
+    color: $logoBlue;
+    }
 }
 div.fullscreen{
     height: 100%;
@@ -29,6 +38,7 @@ div.fullscreen{
 #introSection{
     background-image: url("../images/background-intro.jpg");
     padding-top: 64px;
+    position: relative;
 }
 #navBar{
     position: absolute;
@@ -55,6 +65,9 @@ div.fullscreen{
         text-transform: uppercase;
         span{
             color: $logoBlue;
+        }
+        &:hover{
+            color: white;
         }
     }
     #nav-mobile{
@@ -176,7 +189,155 @@ div.fullscreen{
         display: none;
     }
 }
-
+#newsSection{
+    background-image: url("../images/background-news.jpg");
+    >img:nth-child(1){
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        
+    }
+    > div{
+        padding-top: 50px;
+    }
+    #newsText{
+        h2{
+            font-size: 42px;
+            font-size: 5vh;
+        }
+        h3{
+            font-size: 36px;
+            font-size: 4vh;
+        }
+        p{
+            font-size: 24px;
+            font-size: 3vh;
+            &:nth-child(3){
+                font-size: 36px;
+                font-size: 4vh;
+            }
+            &:nth-child(4){
+                font-size: 42px;
+                font-size: 5vh;
+            }
+            &:nth-child(6){
+                a{
+                    color: lighten($twitchPurple,20);
+                    &:hover{
+                        color: lighten($twitchPurple, 10);
+                    }
+                }
+            }
+        }
+        .socials{
+            margin: 0px 10px;
+            &:nth-child(1){
+                color: $twitterBlue;
+                &:hover{
+                    color: lighten($twitterBlue,10);
+                }
+            }
+            &:nth-child(2){
+                color: $instagramPink;
+                &:hover{
+                    color: lighten($instagramPink,10);
+                }
+            }
+            &:nth-child(3){
+                color: $youtubeRed;
+                &:hover{
+                    color: lighten($youtubeRed,10);
+                }
+            }
+            &:nth-child(4){
+                color: $twitchPurple;
+                &:hover{
+                    color: lighten($twitchPurple,10);
+                }
+            }
+        }
+        .twitter-timeline{
+            width: 500px !important;
+            height: 200px !important;
+        }
+    }
+}
+#footer{
+    background-color: #000;
+    position: relative;
+    // overflow-x: hidden;
+    // overflow-y: visible;
+    >img{
+        position:absolute;
+        top: -75px;
+        right: -50px;
+        width: 125px;
+        z-index: 8;
+    }
+    >div>div{
+        h4{
+            margin-bottom: 20px;
+        }
+        ul{
+            li{
+                margin-bottom: 5px;
+                a{
+                    font-size: 18px;
+                }
+            }
+        }
+        &:last-child{
+            p{
+                font-size: 26px;
+                line-height: 1.0;
+            }
+            >div{
+                position: relative;
+                input{
+                    color: white;
+                    font-size: 18px;
+                    box-sizing: border-box;
+                    padding-left: 15px;
+                    padding-right: 50px;
+                    &:focus{
+                        box-shadow: none;
+                        border-bottom: 1px solid $logoBlue;
+                    }                
+                }
+                a{
+                    position: absolute;
+                    top: 10px;
+                    right: 15px;
+                }
+            }
+        }
+    }
+}
+#fixedButtonWrapper{
+    display: none;
+    #fixedButton{
+        position: fixed;
+        right: 50px;
+        bottom: 50px;
+        z-index: 999;
+    
+        width: 50px;
+        height: 50px;
+        border-radius: 100px;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        background-color: $logoBlue;
+        
+        font-size: 36px;
+        &:hover{
+            color: white;
+            background-color: lighten($logoBlue, 10);
+        }
+    }
+}
 
 @media screen and (max-width: 1024px){
     #sliderSection .slider-text{
@@ -216,7 +377,12 @@ div.fullscreen{
         >h2, >p, >div{
             width: 100%;
         }
-
+    }
+    #newsSection{
+        height: auto;
+        #twitterEmbed{
+            height: 400px;
+        }
     }
 }
 @media screen and (max-width: 496px){
@@ -299,4 +465,8 @@ div.fullscreen{
 // OVERWRITE MATERIALIZE DEFAULTS
 nav .nav-wrapper{
     position: static;
+}
+// OVERWRITE TWITTER WIDGET DEFAULTS
+.drag-target{
+    display: none;
 }

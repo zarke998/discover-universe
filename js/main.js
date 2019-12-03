@@ -2,19 +2,24 @@ var currentImagePosition;
 var slider;
 var animating;
 var sliderTextData;
-var endDate;
-var meteorTimer;
-var supernovaSection;
-var resizeTimer;
-var supernovaData;
-var hostName;
 var sliderImages;
 
 
+var endDate;
+var meteorTimer;
+
+var supernovaSection;
+var supernovaData;
+var supernovaTimeoutTimer;
+
+var fixedButtonTimer;
+
+window.onload = function () {
+    setTimeout(initializeTwitterEmbed, 1000);
+    
+}
 $(document).ready(function () {
     $('.sidenav').sidenav();
-
-    hostName = window.location.hostname + '/discover-universe/';
 
     currentImagePosition = 1;
     animating = false;
@@ -43,8 +48,9 @@ $(document).ready(function () {
 
     animateIntroHeading();
 
-    sliderImages = [];
     addSliderText(1);
+
+    sliderImages = [];
     preloadSliderImages();
 
     meteorTimer = $("#meteorTimer");
@@ -53,16 +59,24 @@ $(document).ready(function () {
 
     supernovaSection = document.getElementById("supernovaSection");
     generateStars();
-
     window.addEventListener("resize", function () {
         var stars = $(supernovaSection).children("div");
         for (star of stars)
             supernovaSection.removeChild(star);
 
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(function () {
+        clearTimeout(supernovaTimeoutTimer);
+        supernovaTimeoutTimer = setTimeout(function () {
             generateStars();
         }, 500);
+    });
+
+    document.getElementsByTagName('body')[0].addEventListener("scroll", checkForEndOfPage);
+    document.getElementById("fixedButton").addEventListener("click", function (event) {
+        event.preventDefault();
+        $("#introSection").animatescroll({
+            scrollSpeed: 3000,
+            easing: 'easeInOutQuad'
+        });
     });
 });
 
@@ -230,10 +244,38 @@ function generateRandomNumber(from, to) {
     var random = Math.floor(Math.random() * (to - from + 1) + from);
     return random;
 }
-function preloadSliderImages(){
-    for(let i = 1; i<= 9; i++){
+function preloadSliderImages() {
+    for (let i = 1; i <= 9; i++) {
         var image = new Image();
         image.src = `images/solar-system/${i}.jpg`;
         sliderImages.push(image);
     }
+}
+function initializeTwitterEmbed() {
+
+    $(".drag-target").hide();
+
+    var twitter = document.getElementById("twitter-widget-0");
+    twitter.style.height = "100%";
+}
+function checkForEndOfPage() {
+    clearTimeout(fixedButtonTimer);
+    if (elPassedInViewport(supernovaSection))
+        fixedButtonTimer = setTimeout(function () {
+            var button = $("#fixedButtonWrapper");
+            button.fadeIn(1000);
+        }, 100);
+    else
+        fixedButtonTimer = setTimeout(function () {
+            var button = $("#fixedButtonWrapper");
+            button.fadeOut(1000);
+            
+        }, 100);
+}
+function elPassedInViewport(element) {
+    var boundings = element.getBoundingClientRect();
+    if (boundings.top <= 0)
+        return true;
+    else
+        return false;
 }

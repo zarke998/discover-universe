@@ -10,15 +10,20 @@ html {
 html, body {
   height: 100%;
   color: white;
+  overflow-x: hidden;
 }
 
 nav {
   line-height: initial;
 }
 
+a {
+  color: white;
+}
+
 a:hover {
   text-decoration: none;
-  color: white;
+  color: #0570C2;
 }
 
 div.fullscreen {
@@ -30,6 +35,7 @@ div.fullscreen {
 #introSection {
   background-image: url("../images/background-intro.jpg");
   padding-top: 64px;
+  position: relative;
 }
 
 #navBar {
@@ -66,6 +72,10 @@ div.fullscreen {
 
 #navBar .brand-logo span {
   color: #0570C2;
+}
+
+#navBar .brand-logo:hover {
+  color: white;
 }
 
 #navBar #nav-mobile li a {
@@ -198,6 +208,179 @@ div.fullscreen {
   display: none;
 }
 
+#newsSection {
+  background-image: url("../images/background-news.jpg");
+}
+
+#newsSection > img:nth-child(1) {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+#newsSection > div {
+  padding-top: 50px;
+}
+
+#newsSection #newsText h2 {
+  font-size: 42px;
+  font-size: 5vh;
+}
+
+#newsSection #newsText h3 {
+  font-size: 36px;
+  font-size: 4vh;
+}
+
+#newsSection #newsText p {
+  font-size: 24px;
+  font-size: 3vh;
+}
+
+#newsSection #newsText p:nth-child(3) {
+  font-size: 36px;
+  font-size: 4vh;
+}
+
+#newsSection #newsText p:nth-child(4) {
+  font-size: 42px;
+  font-size: 5vh;
+}
+
+#newsSection #newsText p:nth-child(6) a {
+  color: #9a7fcd;
+}
+
+#newsSection #newsText p:nth-child(6) a:hover {
+  color: #7e5bbe;
+}
+
+#newsSection #newsText .socials {
+  margin: 0px 10px;
+}
+
+#newsSection #newsText .socials:nth-child(1) {
+  color: #1DA1F2;
+}
+
+#newsSection #newsText .socials:nth-child(1):hover {
+  color: #4db5f5;
+}
+
+#newsSection #newsText .socials:nth-child(2) {
+  color: #d10085;
+}
+
+#newsSection #newsText .socials:nth-child(2):hover {
+  color: #ff05a4;
+}
+
+#newsSection #newsText .socials:nth-child(3) {
+  color: #FF0000;
+}
+
+#newsSection #newsText .socials:nth-child(3):hover {
+  color: #ff3333;
+}
+
+#newsSection #newsText .socials:nth-child(4) {
+  color: #6441a5;
+}
+
+#newsSection #newsText .socials:nth-child(4):hover {
+  color: #7e5bbe;
+}
+
+#newsSection #newsText .twitter-timeline {
+  width: 500px !important;
+  height: 200px !important;
+}
+
+#footer {
+  background-color: #000;
+  position: relative;
+}
+
+#footer > img {
+  position: absolute;
+  top: -75px;
+  right: -50px;
+  width: 125px;
+  z-index: 8;
+}
+
+#footer > div > div h4 {
+  margin-bottom: 20px;
+}
+
+#footer > div > div ul li {
+  margin-bottom: 5px;
+}
+
+#footer > div > div ul li a {
+  font-size: 18px;
+}
+
+#footer > div > div:last-child p {
+  font-size: 26px;
+  line-height: 1.0;
+}
+
+#footer > div > div:last-child > div {
+  position: relative;
+}
+
+#footer > div > div:last-child > div input {
+  color: white;
+  font-size: 18px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 15px;
+  padding-right: 50px;
+}
+
+#footer > div > div:last-child > div input:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-bottom: 1px solid #0570C2;
+}
+
+#footer > div > div:last-child > div a {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+#fixedButtonWrapper {
+  display: none;
+}
+
+#fixedButtonWrapper #fixedButton {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  z-index: 999;
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #0570C2;
+  font-size: 36px;
+}
+
+#fixedButtonWrapper #fixedButton:hover {
+  color: white;
+  background-color: #068df4;
+}
+
 @media screen and (max-width: 1024px) {
   #sliderSection .slider-text p {
     font-size: 2.7vh;
@@ -228,6 +411,12 @@ div.fullscreen {
 @media screen and (max-width: 768px) {
   #meteorSection > h2, #meteorSection > p, #meteorSection > div {
     width: 100%;
+  }
+  #newsSection {
+    height: auto;
+  }
+  #newsSection #twitterEmbed {
+    height: 400px;
   }
 }
 
@@ -320,5 +509,9 @@ div.fullscreen {
 
 nav .nav-wrapper {
   position: static;
+}
+
+.drag-target {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
