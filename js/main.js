@@ -16,7 +16,6 @@ var fixedButtonTimer;
 
 window.onload = function () {
     setTimeout(initializeTwitterEmbed, 1000);
-    
 }
 $(document).ready(function () {
     $('.sidenav').sidenav();
@@ -73,7 +72,7 @@ $(document).ready(function () {
     document.getElementsByTagName('body')[0].addEventListener("scroll", checkForEndOfPage);
     document.getElementById("fixedButton").addEventListener("click", function (event) {
         event.preventDefault();
-        $("#introSection").animatescroll({
+        $("#homeIntro").animatescroll({
             scrollSpeed: 3000,
             easing: 'easeInOutQuad'
         });

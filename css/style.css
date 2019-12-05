@@ -17,6 +17,10 @@ nav {
   line-height: initial;
 }
 
+nav ul li a:hover {
+  background-color: transparent;
+}
+
 a {
   color: white;
 }
@@ -32,7 +36,7 @@ div.fullscreen {
   background-position: center center;
 }
 
-#introSection {
+#homeIntro {
   background-image: url("../images/background-intro.jpg");
   padding-top: 64px;
   position: relative;
@@ -468,6 +472,141 @@ div.fullscreen {
     font-size: 14px;
     margin-bottom: 10px !important;
   }
+}
+
+#newsIntro {
+  height: 400px;
+  background-image: url("../images/news-page-background.jpg");
+  background-size: cover;
+  background-position: center 100%;
+  position: relative;
+}
+
+#newsIntro .newsMenu li a:hover {
+  text-shadow: -1px -1px 0 #313131, 1px -1px 0 #313131, -1px 1px 0 #313131, 1px 1px 0 #313131;
+}
+
+#newsIntro .news-logo {
+  text-shadow: -1px -1px 0 #313131, 1px -1px 0 #313131, -1px 1px 0 #313131, 1px 1px 0 #313131;
+}
+
+#newsPageMain {
+  background-image: url("../images/star-pattern.jpg");
+  background-repeat: repeat;
+  background-color: black;
+  position: relative;
+}
+
+#newsPageMain .mySelectWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#newsPageMain .mySelectWrapper p {
+  margin-top: 10px;
+  margin-bottom: 0px;
+  margin-right: 5px;
+  font-size: 20px;
+}
+
+#newsPageMain .mySelectWrapper input {
+  color: white !important;
+  margin-bottom: 0px;
+  border-bottom: 2px solid #b9b9b9;
+}
+
+#newsPageMain .mySelectWrapper input:focus {
+  border-bottom: 2px solid #0570C2;
+}
+
+#newsPageMain .mySelectWrapper span {
+  color: #0570C2;
+}
+
+#newsPageMain .mySelectWrapper svg {
+  fill: white;
+}
+
+#newsPageMain #paginationWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#newsPageMain #paginationWrapper .pagination {
+  margin-bottom: 0px;
+}
+
+#newsPageMain #paginationWrapper .pagination li.active {
+  background-color: #0570C2;
+}
+
+#newsPageMain #paginationWrapper .pagination li.active a {
+  color: white;
+}
+
+#newsPageMain #paginationWrapper .pagination li.disabled a {
+  color: #444;
+}
+
+#newsPageMain #paginationWrapper .pagination li a {
+  color: #999;
+}
+
+#newsPageMain .newsListItem p {
+  text-align: left;
+  margin: 0px 0px;
+  margin-bottom: 10px;
+}
+
+#newsPageMain .newsListItem img {
+  width: 100%;
+  border: 1px solid white;
+  margin-bottom: 10px;
+}
+
+#newsPageMain .newsListItem h4 {
+  text-align: center;
+  font-size: 16px;
+}
+
+#newsPageMainSide ul {
+  border: 1px solid #b7b7b7;
+}
+
+#newsPageMainSide .collection-item {
+  border-bottom: 1px solid #b7b7b7;
+  background-color: transparent;
+  min-height: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#newsPageMainSide .collection-item span {
+  font-size: 16px;
+}
+
+.fixedNav {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 999;
 }
 
 .shining-star {

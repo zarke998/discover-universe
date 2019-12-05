@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Discover Universe | News</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/materialize.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div id="newsIntro">
+        <nav id="navBar" class="container-fluid px-5">
+            <div class="nav-wrapper">
+                <a id="logo" href="index.html" class="brand-logo news-logo">Discover<span>Universe</span></a>
+                <a id="mobile-menu" href="#" data-target="mobile-demo" class="sidenav-trigger"><i
+                        class="material-icons">menu</i></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down newsMenu">
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Forum</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="news.html">News</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Forum</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </div>
+    <div id="newsPageMain">
+        <div class="row pt-5 mx-0 my-0">
+            <div class="col-12 col-md-8 px-4 pl-md-5">
+                <h2 class="text-center mb-5">News</h2>
+                <div class="row mx-0">
+                    <div class="col-sm-4 col-lg-3 px-0 mySelectWrapper order-2 order-sm-1">
+                        <p>Sort by</p>
+                        <div class="input-field col s12">
+                            <select id="sortBy">
+                                <option value="1">Asc A-Z</option>
+                                <option value="2">Desc Z-A</option>
+                                <option value="3">Date Asc</option>
+                                <option value="4">Date Desc</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="paginationWrapper" class="col-sm-4 col-lg-6 px-0 order-1 order-sm-2">
+                        <ul class="pagination d-flex justify-content-center">
+                            <li class="disabled" data-increment="-1"><a href="#!"><i
+                                        class="material-icons">chevron_left</i></a></li>
+                            <li class="active"><a href="#!">1</a></li>
+                            <li class="waves-effect"><a href="#!">2</a></li>
+                            <li class="waves-effect"><a href="#!">3</a></li>
+                            <li class="waves-effect" data-increment="1"><a href="#!"><i
+                                        class="material-icons">chevron_right</i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-lg-3 px-0 mySelectWrapper order-3 order-sm-3">
+                        <p>Items</p>
+                        <div class="input-field col s12">
+                            <select id="itemsShowing">
+                                <option value="9">9</option>
+                                <option value="12">12</option>
+                                <option value="15">15</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div id="newsList" class="row"></div>
+                <div class="row mx-0">
+                    <div id="paginationWrapper" class="col-6 offset-3 px-0">
+                        <ul class="pagination d-flex justify-content-center">
+                            <li class="arrow disabled" data-increment="-1"><a href="#!"><i
+                                        class="material-icons">chevron_left</i></a></li>
+                            <li class="active"><a href="#!">1</a></li>
+                            <li class="waves-effect"><a href="#!">2</a></li>
+                            <li class="waves-effect"><a href="#!">3</a></li>
+                            <li class="arrow waves-effect" data-increment="1"><a href="#!"><i
+                                        class="material-icons">chevron_right</i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="newsPageMainSide" class="col-12 col-md-4 px-5 mt-5">
+                <h3 class="text-center mb-4">Events</h3>
+                <ul id="eventList" class="collection"></ul>
+            </div>
+        </div>
+    </div>
+    <div id="footer" class="text-center">
+        <img src="images/neptune-icon.png" alt="Neptune icon">
+
+        <div class="row mx-0 my-0">
+            <div class="col-sm-6 col-md-2 mt-4">
+                <h4>General</h4>
+                <ul>
+                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">RSS</a></li>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-6 col-md-2 mt-4">
+                <h4>Socials</h4>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Youtube</a></li>
+                    <li><a href="#">Twitch</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-6 col-md-2 mt-4">
+                <h4>Website</h4>
+                <ul>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Forum</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-6 col-md-2 mt-4">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Disclaimer</a></li>
+                    <li><a href="#">Sources</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 pr-md-5 mt-4">
+                <p>Subscribe to our newsletter</p>
+                <div>
+                    <input type="text">
+                    <a href="#"><i class="material-icons">send</i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <p class="mb-0 py-2 px-4">Copyright © DiscoverUniverse 2019. All rights reserved.</p>
+    </div>
+    <div id="fixedButtonWrapper">
+        <a id="fixedButton" href="#"><i class="fas fa-arrow-up"></i></a>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
+    <script src="js/materialize.js" type="text/javascript"></script>
+    <script src="js/news.js" type="text/javascript"></script>
+</body>
+
+</html>

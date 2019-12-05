@@ -4,6 +4,12 @@ $instagramPink: #d10085;
 $youtubeRed: #FF0000;
 $twitchPurple: #6441a5;
 
+$paginationLink: #999;
+$paginationDisabled: #444;
+$eventsBorder: #b7b7b7;
+
+$linkHoverBlue: #86cbff;
+
 @font-face{
     src: url("../fonts/LeelawUI.ttf") format("ttf");
     font-family: "Leelawadee UI";
@@ -21,6 +27,9 @@ html, body{
 }
 nav{
     line-height: initial;
+    ul li a:hover{
+        background-color: transparent;
+    }
 }
 
 a{
@@ -35,7 +44,7 @@ div.fullscreen{
     background-size: cover;
     background-position: center center;
 }
-#introSection{
+#homeIntro{
     background-image: url("../images/background-intro.jpg");
     padding-top: 64px;
     position: relative;
@@ -442,6 +451,135 @@ div.fullscreen{
             margin-bottom: 10px !important;
         }
     }
+}
+
+
+// NEWS PAGE
+#newsIntro{
+    height: 400px;
+    background-image: url('../images/news-page-background.jpg');
+    background-size: cover;
+    background-position: center 100%;
+    position: relative;
+
+    .newsMenu{
+        li a{
+            &:hover{
+                text-shadow:
+		-1px -1px 0 rgb(49, 49, 49),
+		1px -1px 0 rgb(49, 49, 49),
+		-1px 1px 0 rgb(49, 49, 49),
+		1px 1px 0 rgb(49, 49, 49);
+            }
+        }
+    }
+    .news-logo{
+        text-shadow:
+		-1px -1px 0 rgb(49, 49, 49),
+		1px -1px 0 rgb(49, 49, 49),
+		-1px 1px 0 rgb(49, 49, 49),
+		1px 1px 0 rgb(49, 49, 49);
+    }
+}
+
+#newsPageMain{
+    background-image: url("../images/star-pattern.jpg");
+    background-repeat: repeat;
+    background-color: black;
+    position: relative;
+
+    .mySelectWrapper{
+        display: flex;
+        align-items: center;
+        p{
+            margin-top: 10px;
+            margin-bottom: 0px;
+            margin-right: 5px;
+            font-size: 20px;
+        }
+        input{
+            color: white !important;
+            margin-bottom: 0px;
+            border-bottom: 2px solid #b9b9b9;
+            &:focus{
+                border-bottom: 2px solid $logoBlue;
+            }
+        }
+        span{
+            color: $logoBlue;
+        }
+        svg{
+            fill: white;
+        }
+    }
+    #paginationWrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .pagination{
+            margin-bottom: 0px;
+            li.active{
+                background-color: $logoBlue;
+                a{
+                    color: white;
+                }
+            }
+            li.disabled{
+                a{
+                    color: $paginationDisabled;
+                }
+            }
+            li{
+                a{
+                color: $paginationLink;
+                }
+            }
+        }
+    }
+    .newsListItem{
+        p{
+            text-align: left;
+            margin: 0px 0px;
+            margin-bottom: 10px;
+        }
+        img{
+            width: 100%;
+            border: 1px solid white;
+            margin-bottom: 10px;
+        }
+        h4{
+            text-align: center;
+            font-size: 16px;
+        }
+    }
+
+
+    &Side{
+        h3{
+
+        }
+        ul{
+            border: 1px solid $eventsBorder;
+        }
+        .collection-item{
+            border-bottom: 1px solid $eventsBorder;
+            background-color: transparent;
+            min-height: 0px;
+            display: flex;
+            align-items: center;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            span{
+                font-size: 16px;
+            }
+        }
+    }
+}
+.fixedNav{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
 }
 
 // ANIMATIONS
