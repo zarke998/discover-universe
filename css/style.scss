@@ -455,31 +455,34 @@ div.fullscreen{
 
 
 // NEWS PAGE
-#newsIntro{
+.shorterIntro{
     height: 400px;
-    background-image: url('../images/news-page-background.jpg');
     background-size: cover;
     background-position: center 100%;
     position: relative;
+}
+#newsIntro{
+    background-image: url('../images/news-page-background.jpg');
 
-    .newsMenu{
-        li a{
-            &:hover{
-                text-shadow:
-		-1px -1px 0 rgb(49, 49, 49),
-		1px -1px 0 rgb(49, 49, 49),
-		-1px 1px 0 rgb(49, 49, 49),
-		1px 1px 0 rgb(49, 49, 49);
-            }
+    
+}
+.bolded-menu{
+    li a{
+        &:hover{
+            text-shadow:
+    -1px -1px 0 rgba(0, 0, 0, 0.63),
+    1px -1px 0 rgba(0, 0, 0, 0.63),
+    -1px 1px 0 rgba(0, 0, 0, 0.63),
+    1px 1px 0 rgba(0, 0, 0, 0.63);
         }
     }
-    .news-logo{
-        text-shadow:
-		-1px -1px 0 rgb(49, 49, 49),
-		1px -1px 0 rgb(49, 49, 49),
-		-1px 1px 0 rgb(49, 49, 49),
-		1px 1px 0 rgb(49, 49, 49);
-    }
+}
+.bolded-logo{
+    text-shadow:
+    -1px -1px 0 rgb(49, 49, 49),
+    1px -1px 0 rgb(49, 49, 49),
+    -1px 1px 0 rgb(49, 49, 49),
+    1px 1px 0 rgb(49, 49, 49);
 }
 
 #newsPageMain{
@@ -580,6 +583,26 @@ div.fullscreen{
     top: 0px;
     left: 0px;
     z-index: 999;
+}
+
+// WALLPAPERS PAGE
+#wallpapersIntro{
+    background-image: url("../images/background-wallpapers.jpg");
+}
+#wallpapersPageBody{
+    background-image: url("../images/star-pattern.jpg");
+    background-repeat: repeat;
+    min-height: 800px;
+    padding-bottom: 75px;
+
+    img{
+        width: 100%;
+        border: 1px solid white;
+    }
+}
+.loading-circle{
+    display: flex;
+    justify-content: center;
 }
 
 // ANIMATIONS

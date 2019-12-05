@@ -474,19 +474,22 @@ div.fullscreen {
   }
 }
 
-#newsIntro {
+.shorterIntro {
   height: 400px;
-  background-image: url("../images/news-page-background.jpg");
   background-size: cover;
   background-position: center 100%;
   position: relative;
 }
 
-#newsIntro .newsMenu li a:hover {
-  text-shadow: -1px -1px 0 #313131, 1px -1px 0 #313131, -1px 1px 0 #313131, 1px 1px 0 #313131;
+#newsIntro {
+  background-image: url("../images/news-page-background.jpg");
 }
 
-#newsIntro .news-logo {
+.bolded-menu li a:hover {
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.63), 1px -1px 0 rgba(0, 0, 0, 0.63), -1px 1px 0 rgba(0, 0, 0, 0.63), 1px 1px 0 rgba(0, 0, 0, 0.63);
+}
+
+.bolded-logo {
   text-shadow: -1px -1px 0 #313131, 1px -1px 0 #313131, -1px 1px 0 #313131, 1px 1px 0 #313131;
 }
 
@@ -607,6 +610,31 @@ div.fullscreen {
   top: 0px;
   left: 0px;
   z-index: 999;
+}
+
+#wallpapersIntro {
+  background-image: url("../images/background-wallpapers.jpg");
+}
+
+#wallpapersPageBody {
+  background-image: url("../images/star-pattern.jpg");
+  background-repeat: repeat;
+  min-height: 800px;
+  padding-bottom: 75px;
+}
+
+#wallpapersPageBody img {
+  width: 100%;
+  border: 1px solid white;
+}
+
+.loading-circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .shining-star {
