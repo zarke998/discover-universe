@@ -390,95 +390,6 @@ div.fullscreen {
   background-color: #068df4;
 }
 
-@media screen and (max-width: 1024px) {
-  #sliderSection .slider-text p {
-    font-size: 2.7vh;
-  }
-  #meteorSection > h2, #meteorSection > p, #meteorSection > div {
-    width: 75%;
-  }
-}
-
-@media screen and (max-width: 886px) {
-  #introHeadingText h1 {
-    font-size: 42px;
-  }
-  #introHeadingText p {
-    font-size: 22px;
-  }
-  .slider-text {
-    display: none;
-  }
-  #sliderSection #sliderMobileText {
-    display: block;
-  }
-  #sliderSection #sliderMobileText p {
-    font-size: 18px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  #meteorSection > h2, #meteorSection > p, #meteorSection > div {
-    width: 100%;
-  }
-  #newsSection {
-    height: auto;
-  }
-  #newsSection #twitterEmbed {
-    height: 400px;
-  }
-}
-
-@media screen and (max-width: 496px) {
-  #meteorSection > h2 {
-    margin-top: 0px !important;
-    margin-bottom: 30px !important;
-    font-size: 28px;
-    text-align: center;
-  }
-  #meteorSection > p {
-    font-size: 16px;
-  }
-  #meteorSection #meteorTimerWrapper {
-    font-size: 12px;
-  }
-}
-
-@media screen and (max-width: 425px) {
-  #introHeadingText h1 {
-    font-size: 36px;
-  }
-  #introHeadingText p {
-    font-size: 18px;
-  }
-  #sliderSection #sliderMobileText {
-    padding: 0px 50px;
-  }
-  #sliderSection #sliderMobileText p {
-    font-size: 16px;
-  }
-  #supernovaSection p {
-    font-size: 36px;
-  }
-}
-
-@media screen and (max-width: 375px) {
-  #logo {
-    margin-left: 20px;
-  }
-  #meteorSection {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-  }
-  #meteorSection > h2 {
-    font-size: 22px;
-  }
-  #meteorSection > p {
-    font-size: 14px;
-    margin-bottom: 10px !important;
-  }
-}
-
 .shorterIntro {
   height: 400px;
   background-size: cover;
@@ -739,5 +650,97 @@ input[type='checkbox']:checked + span:not(.lever):before {
 
 .drag-target {
   display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  #sliderSection .slider-text p {
+    font-size: 2.7vh;
+  }
+  #meteorSection > h2, #meteorSection > p, #meteorSection > div {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 886px) {
+  #introHeadingText h1 {
+    font-size: 42px;
+  }
+  #introHeadingText p {
+    font-size: 22px;
+  }
+  .slider-text {
+    display: none;
+  }
+  #sliderSection #sliderMobileText {
+    display: block;
+  }
+  #sliderSection #sliderMobileText p {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #meteorSection > h2, #meteorSection > p, #meteorSection > div {
+    width: 100%;
+  }
+  #newsSection {
+    height: auto;
+  }
+  #newsSection #twitterEmbed {
+    height: 400px;
+  }
+  #forumPageBody #registerWrapper {
+    border-left: none;
+  }
+}
+
+@media screen and (max-width: 496px) {
+  #meteorSection > h2 {
+    margin-top: 0px !important;
+    margin-bottom: 30px !important;
+    font-size: 28px;
+    text-align: center;
+  }
+  #meteorSection > p {
+    font-size: 16px;
+  }
+  #meteorSection #meteorTimerWrapper {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #introHeadingText h1 {
+    font-size: 36px;
+  }
+  #introHeadingText p {
+    font-size: 18px;
+  }
+  #sliderSection #sliderMobileText {
+    padding: 0px 50px;
+  }
+  #sliderSection #sliderMobileText p {
+    font-size: 16px;
+  }
+  #supernovaSection p {
+    font-size: 36px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #logo {
+    margin-left: 20px;
+  }
+  #meteorSection {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  #meteorSection > h2 {
+    font-size: 22px;
+  }
+  #meteorSection > p {
+    font-size: 14px;
+    margin-bottom: 10px !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */

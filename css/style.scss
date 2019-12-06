@@ -352,110 +352,7 @@ div.fullscreen{
     }
 }
 
-@media screen and (max-width: 1024px){
-    #sliderSection .slider-text{
-        p{
-            // font-size: 20px;
-            font-size: 2.7vh;
-        }
-    }
-    #meteorSection{        
-        >h2,>p, >div{
-            width: 75%;
-        }
 
-    }
-}
-@media screen and (max-width: 886px){
-    #introHeadingText{
-        h1{
-            font-size: 42px;
-        }
-        p{
-            font-size: 22px;
-        }
-    }
-    .slider-text{
-        display: none;
-    }
-    #sliderSection #sliderMobileText{
-        display: block;
-        p{
-            font-size: 18px;
-        }
-    }
-}
-@media screen and (max-width: 768px){
-    #meteorSection{        
-        >h2, >p, >div{
-            width: 100%;
-        }
-    }
-    #newsSection{
-        height: auto;
-        #twitterEmbed{
-            height: 400px;
-        }
-    }
-}
-@media screen and (max-width: 496px){
-    #meteorSection{
-        >h2{
-            margin-top: 0px !important;
-            margin-bottom: 30px !important;
-            font-size: 28px;
-            // font-size: 5vh;
-            text-align: center;
-        }
-        >p{
-            font-size: 16px;
-            // font-size: 3vh;
-        }
-        #meteorTimerWrapper{
-            font-size: 12px;
-        }
-    }
-}
-@media screen and (max-width: 425px){
-    #introHeadingText{
-        h1{
-            font-size: 36px;
-        }
-        p{
-            font-size: 18px;
-        }
-    }
-    #sliderSection #sliderMobileText{
-        padding: 0px 50px;
-        p{
-            font-size: 16px;
-        }
-    }
-    #supernovaSection{
-        p{
-            font-size: 36px;
-        }
-    }
-}
-@media screen and (max-width: 375px){
-    #logo{
-        margin-left: 20px;
-    }
-    #meteorSection{
-        padding-left: 20px !important;
-        padding-right: 20px !important;
-
-        >h2{
-            font-size: 22px;
-            // font-size: 5vh;
-        }
-        >p{
-            font-size: 14px;
-            // font-size: 3vh;
-            margin-bottom: 10px !important;
-        }
-    }
-}
 
 
 // NEWS PAGE
@@ -680,4 +577,115 @@ input[type='checkbox']:checked + span:not(.lever):before{
 // OVERWRITE TWITTER WIDGET DEFAULTS
 .drag-target{
     display: none;
+}
+
+// RESPONSIVE
+@media screen and (max-width: 1024px){
+    #sliderSection .slider-text{
+        p{
+            // font-size: 20px;
+            font-size: 2.7vh;
+        }
+    }
+    #meteorSection{        
+        >h2,>p, >div{
+            width: 75%;
+        }
+
+    }
+}
+@media screen and (max-width: 886px){
+    #introHeadingText{
+        h1{
+            font-size: 42px;
+        }
+        p{
+            font-size: 22px;
+        }
+    }
+    .slider-text{
+        display: none;
+    }
+    #sliderSection #sliderMobileText{
+        display: block;
+        p{
+            font-size: 18px;
+        }
+    }
+}
+@media screen and (max-width: 768px){
+    #meteorSection{        
+        >h2, >p, >div{
+            width: 100%;
+        }
+    }
+    #newsSection{
+        height: auto;
+        #twitterEmbed{
+            height: 400px;
+        }
+    }
+    #forumPageBody{
+        #registerWrapper{
+            border-left: none;
+        }
+    }
+}
+@media screen and (max-width: 496px){
+    #meteorSection{
+        >h2{
+            margin-top: 0px !important;
+            margin-bottom: 30px !important;
+            font-size: 28px;
+            // font-size: 5vh;
+            text-align: center;
+        }
+        >p{
+            font-size: 16px;
+            // font-size: 3vh;
+        }
+        #meteorTimerWrapper{
+            font-size: 12px;
+        }
+    }
+}
+@media screen and (max-width: 425px){
+    #introHeadingText{
+        h1{
+            font-size: 36px;
+        }
+        p{
+            font-size: 18px;
+        }
+    }
+    #sliderSection #sliderMobileText{
+        padding: 0px 50px;
+        p{
+            font-size: 16px;
+        }
+    }
+    #supernovaSection{
+        p{
+            font-size: 36px;
+        }
+    }
+}
+@media screen and (max-width: 375px){
+    #logo{
+        margin-left: 20px;
+    }
+    #meteorSection{
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+
+        >h2{
+            font-size: 22px;
+            // font-size: 5vh;
+        }
+        >p{
+            font-size: 14px;
+            // font-size: 3vh;
+            margin-bottom: 10px !important;
+        }
+    }
 }
