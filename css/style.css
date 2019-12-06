@@ -246,6 +246,10 @@ div.fullscreen {
   font-size: 3vh;
 }
 
+#newsSection #newsText p .socials {
+  font-size: 5vh;
+}
+
 #newsSection #newsText p:nth-child(3) {
   font-size: 36px;
   font-size: 4vh;
@@ -261,42 +265,6 @@ div.fullscreen {
 }
 
 #newsSection #newsText p:nth-child(6) a:hover {
-  color: #7e5bbe;
-}
-
-#newsSection #newsText .socials {
-  margin: 0px 10px;
-}
-
-#newsSection #newsText .socials:nth-child(1) {
-  color: #1DA1F2;
-}
-
-#newsSection #newsText .socials:nth-child(1):hover {
-  color: #4db5f5;
-}
-
-#newsSection #newsText .socials:nth-child(2) {
-  color: #d10085;
-}
-
-#newsSection #newsText .socials:nth-child(2):hover {
-  color: #ff05a4;
-}
-
-#newsSection #newsText .socials:nth-child(3) {
-  color: #FF0000;
-}
-
-#newsSection #newsText .socials:nth-child(3):hover {
-  color: #ff3333;
-}
-
-#newsSection #newsText .socials:nth-child(4) {
-  color: #6441a5;
-}
-
-#newsSection #newsText .socials:nth-child(4):hover {
   color: #7e5bbe;
 }
 
@@ -602,6 +570,42 @@ div.fullscreen {
   border-bottom-color: #ff5050;
 }
 
+#aboutIntro {
+  background-image: url("../images/background-about.jpg");
+}
+
+#aboutPageBody {
+  min-height: 600px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0))), url("../images/star-pattern.jpg");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), url("../images/star-pattern.jpg");
+  background-repeat: repeat;
+}
+
+#aboutPageBody #profileWrapper img {
+  width: 100%;
+  border: 1px solid white;
+}
+
+#aboutPageBodyMainText > p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+#aboutPageBodyMainText #personalLinks p {
+  margin-bottom: 5px;
+  font-size: 22px;
+}
+
+#aboutPageBodyMainText #personalLinks p a {
+  margin-left: 5px;
+}
+
+#aboutPageBody #twitch iframe {
+  width: 100%;
+  height: 40vh;
+  border: 1px solid rgba(126, 126, 126, 0.637);
+}
+
 .shining-star {
   -webkit-animation-name: shine;
           animation-name: shine;
@@ -650,6 +654,43 @@ input[type='checkbox']:checked + span:not(.lever):before {
 
 .drag-target {
   display: none;
+}
+
+.socials {
+  margin: 0px 10px;
+  font-size: 36px;
+}
+
+.socials:nth-child(1) {
+  color: #1DA1F2;
+}
+
+.socials:nth-child(1):hover {
+  color: #4db5f5;
+}
+
+.socials:nth-child(2) {
+  color: #d10085;
+}
+
+.socials:nth-child(2):hover {
+  color: #ff05a4;
+}
+
+.socials:nth-child(3) {
+  color: #FF0000;
+}
+
+.socials:nth-child(3):hover {
+  color: #ff3333;
+}
+
+.socials:nth-child(4) {
+  color: #6441a5;
+}
+
+.socials:nth-child(4):hover {
+  color: #7e5bbe;
 }
 
 @media screen and (max-width: 1024px) {
@@ -725,6 +766,16 @@ input[type='checkbox']:checked + span:not(.lever):before {
   #supernovaSection p {
     font-size: 36px;
   }
+  #aboutPageBody #profileWrapper {
+    max-width: 100%;
+    -webkit-box-flex: 0 !important;
+        -ms-flex: 0 0 90% !important;
+            flex: 0 0 90% !important;
+    margin-left: 5%;
+  }
+  #aboutPageBodyMainText > p {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 375px) {
@@ -741,6 +792,13 @@ input[type='checkbox']:checked + span:not(.lever):before {
   #meteorSection > p {
     font-size: 14px;
     margin-bottom: 10px !important;
+  }
+  #aboutPageBodyMainText #personalLinks p {
+    margin-bottom: 15px;
+  }
+  #aboutPageBodySide {
+    padding: 0px 20px !important;
+    z-index: 999;
   }
 }
 /*# sourceMappingURL=style.css.map */

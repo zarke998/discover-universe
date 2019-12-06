@@ -3,7 +3,6 @@ $twitterBlue: #1DA1F2;
 $instagramPink: #d10085;
 $youtubeRed: #FF0000;
 $twitchPurple: #6441a5;
-
 $paginationLink: #999;
 $paginationDisabled: #444;
 $eventsBorder: #b7b7b7;
@@ -202,6 +201,7 @@ div.fullscreen{
         display: none;
     }
 }
+
 #newsSection{
     background-image: url("../images/background-news.jpg");
     >img:nth-child(1){
@@ -225,6 +225,9 @@ div.fullscreen{
         p{
             font-size: 24px;
             font-size: 3vh;
+            .socials{
+                font-size: 5vh;
+            }
             &:nth-child(3){
                 font-size: 36px;
                 font-size: 4vh;
@@ -239,33 +242,6 @@ div.fullscreen{
                     &:hover{
                         color: lighten($twitchPurple, 10);
                     }
-                }
-            }
-        }
-        .socials{
-            margin: 0px 10px;
-            &:nth-child(1){
-                color: $twitterBlue;
-                &:hover{
-                    color: lighten($twitterBlue,10);
-                }
-            }
-            &:nth-child(2){
-                color: $instagramPink;
-                &:hover{
-                    color: lighten($instagramPink,10);
-                }
-            }
-            &:nth-child(3){
-                color: $youtubeRed;
-                &:hover{
-                    color: lighten($youtubeRed,10);
-                }
-            }
-            &:nth-child(4){
-                color: $twitchPurple;
-                &:hover{
-                    color: lighten($twitchPurple,10);
                 }
             }
         }
@@ -548,6 +524,47 @@ div.fullscreen{
         border-bottom-color: #ff5050;
     }
 }
+
+// ABOUT PAGE
+#aboutIntro{
+    background-image: url("../images/background-about.jpg");
+}
+#aboutPageBody{
+    min-height: 600px;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0)) ,url("../images/star-pattern.jpg");
+    background-repeat: repeat;
+    #profileWrapper{
+        img{
+            width: 100%;
+            border: 1px solid white;
+        }
+    }
+    &Main{
+        &Text{
+            >p{
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+            #personalLinks{
+                p{
+                    margin-bottom: 5px;
+                    font-size: 22px;
+                    a{
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+    #twitch{
+        iframe{
+            width: 100%;
+            height: 40vh;
+            border: 1px solid rgba(126, 126, 126, 0.637);
+        }
+    }
+}
+
 // ANIMATIONS
 .shining-star{
     animation-name: shine;
@@ -577,6 +594,36 @@ input[type='checkbox']:checked + span:not(.lever):before{
 // OVERWRITE TWITTER WIDGET DEFAULTS
 .drag-target{
     display: none;
+}
+
+// MY CLASSES
+.socials{
+    margin: 0px 10px;
+    font-size: 36px;
+    &:nth-child(1){
+        color: $twitterBlue;
+        &:hover{
+            color: lighten($twitterBlue,10);
+        }
+    }
+    &:nth-child(2){
+        color: $instagramPink;
+        &:hover{
+            color: lighten($instagramPink,10);
+        }
+    }
+    &:nth-child(3){
+        color: $youtubeRed;
+        &:hover{
+            color: lighten($youtubeRed,10);
+        }
+    }
+    &:nth-child(4){
+        color: $twitchPurple;
+        &:hover{
+            color: lighten($twitchPurple,10);
+        }
+    }
 }
 
 // RESPONSIVE
@@ -669,6 +716,20 @@ input[type='checkbox']:checked + span:not(.lever):before{
             font-size: 36px;
         }
     }
+    #aboutPageBody{
+        #profileWrapper{
+            max-width: 100%;
+            flex: 0 0 90% !important;
+            margin-left: 5%;
+        }
+        &Main{
+            &Text{
+                >p{
+                    text-align: center;
+                }
+            }
+        }
+    }
 }
 @media screen and (max-width: 375px){
     #logo{
@@ -686,6 +747,19 @@ input[type='checkbox']:checked + span:not(.lever):before{
             font-size: 14px;
             // font-size: 3vh;
             margin-bottom: 10px !important;
+        }
+    }
+    #aboutPageBody{
+        &Main{
+            &Text{
+                #personalLinks p{
+                    margin-bottom: 15px;
+                }
+            }
+        }
+        &Side{
+            padding: 0px 20px !important;
+            z-index: 999;
         }
     }
 }
