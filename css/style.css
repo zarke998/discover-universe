@@ -21,6 +21,11 @@ nav ul li a:hover {
   background-color: transparent;
 }
 
+button {
+  height: auto !important;
+  text-transform: none !important;
+}
+
 a {
   color: white;
 }
@@ -637,6 +642,55 @@ div.fullscreen {
           justify-content: center;
 }
 
+#forumIntro {
+  background-image: url("../images/background-forum.jpg");
+  background-position-y: 75%;
+}
+
+#forumPageBody {
+  min-height: 600px;
+  background-image: url("../images/star-pattern.jpg");
+  background-repeat: repeat;
+}
+
+#forumPageBody input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0px 10px;
+  color: #e2e2e2;
+}
+
+#forumPageBody input:focus {
+  border-bottom: 1px solid #0570C2;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #e2e2e2;
+}
+
+#forumPageBody label {
+  font-size: 18px;
+  color: #9e9e9e;
+}
+
+#forumPageBody #registerWrapper {
+  border-left: 1px solid #757575;
+}
+
+#forumPageBody .input-invalid-tooltip {
+  font-size: 13px;
+  padding-left: 10px;
+  color: #ff5050;
+  width: 100%;
+}
+
+#forumPageBody .input-valid {
+  border-bottom-color: #00d400;
+}
+
+#forumPageBody .input-invalid {
+  border-bottom-color: #ff5050;
+}
+
 .shining-star {
   -webkit-animation-name: shine;
           animation-name: shine;
@@ -676,6 +730,11 @@ div.fullscreen {
 
 nav .nav-wrapper {
   position: static;
+}
+
+input[type='checkbox']:checked + span:not(.lever):before {
+  border-right-color: #0570C2;
+  border-bottom-color: #0570C2;
 }
 
 .drag-target {

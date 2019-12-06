@@ -31,6 +31,10 @@ nav{
         background-color: transparent;
     }
 }
+button{
+    height: auto !important;
+    text-transform: none !important;
+}
 
 a{
     color: white;
@@ -605,6 +609,48 @@ div.fullscreen{
     justify-content: center;
 }
 
+// FORUM PAGE
+#forumIntro{
+    background-image: url("../images/background-forum.jpg");
+    background-position-y: 75%;
+}
+#forumPageBody{
+    min-height: 600px;
+    background-image: url("../images/star-pattern.jpg");
+    background-repeat: repeat;
+
+    input{
+        box-sizing: border-box;
+        padding: 0px 10px;
+        color: rgb(226, 226, 226);
+        &:focus{
+            border-bottom: 1px solid $logoBlue;
+            // box-shadow: 1px solid $logoBlue;
+            box-shadow: none;
+            color: rgb(226, 226, 226);
+
+        }
+    }
+    label{
+        font-size: 18px;
+        color:#9e9e9e;
+    }
+    #registerWrapper{
+        border-left: 1px solid rgb(117, 117, 117);
+    }
+    .input-invalid-tooltip{
+        font-size: 13px;
+        padding-left: 10px;
+        color: #ff5050;
+        width:100%;
+    }
+    .input-valid{
+        border-bottom-color: #00d400;
+    }
+    .input-invalid{
+        border-bottom-color: #ff5050;
+    }
+}
 // ANIMATIONS
 .shining-star{
     animation-name: shine;
@@ -626,6 +672,10 @@ div.fullscreen{
 // OVERWRITE MATERIALIZE DEFAULTS
 nav .nav-wrapper{
     position: static;
+}
+input[type='checkbox']:checked + span:not(.lever):before{
+    border-right-color: $logoBlue;
+    border-bottom-color: $logoBlue;
 }
 // OVERWRITE TWITTER WIDGET DEFAULTS
 .drag-target{

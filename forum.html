@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Discover Universe | Wallpapers</title>
+    <title>Discover Universe | Forum</title>
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/materialize.css">
@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <div id="wallpapersIntro" class="shorterIntro">
+    <div id="forumIntro" class="shorterIntro">
         <nav id="navBar" class="container-fluid px-5">
             <div class="nav-wrapper">
                 <a id="logo" href="index.html" class="brand-logo bolded-logo">Discover<span>Universe</span></a>
@@ -23,7 +23,7 @@
                 <ul id="nav-mobile" class="right hide-on-med-and-down bolded-menu">
                     <li><a href="news.html">News</a></li>
                     <li><a href="wallpapers.html">Wallpapers</a></li>
-                    <li><a href="forum.html">Forum</a></li>
+                    <li><a href="#">Forum</a></li>
                     <li><a href="#">About</a></li>
                 </ul>
             </div>
@@ -32,30 +32,68 @@
         <ul class="sidenav" id="mobile-demo">
             <li><a href="news.html">News</a></li>
             <li><a href="wallpapers.html">Wallpapers</a></li>
-            <li><a href="forum.html">Forum</a></li>
+            <li><a href="#">Forum</a></li>
             <li><a href="#">About</a></li>
         </ul>
     </div>
-    <div id="wallpapersPageBody" class="px-4 pt-5">
-        <h2 class="text-center mb-5">Wallpapers</h2>
-        <div id="gallery" class="row my-0">
-            <div id="loadingCircle" class="col-12 mb-4 loading-circle">
-                <div class="preloader-wrapper big active">
-                    <div class="spinner-layer spinner-blue-only">
-                        <div class="circle-clipper left">
-                            <div class="circle"></div>
-                        </div>
-                        <div class="gap-patch">
-                            <div class="circle"></div>
-                        </div>
-                        <div class="circle-clipper right">
-                            <div class="circle"></div>
+    <div id="forumPageBody" class="py-5">
+        <div class="row mx-0 my-0">
+            <div class="col-md-6 px-5 mb-5">
+                <h2 class="text-center mb-4">Login</h2>
+                <form action="" class="px-3">
+                    <div class="form-group">
+                        <input class="form-control form-control-lg" type="text" id="loginEmailUsername"
+                            placeholder="Email or username">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control form-control-lg mb-3" type="password" id="loginPassword"
+                            placeholder="Password">
+                    </div>
+                    <p class="pl-2">
+                        <label>
+                            <input type="checkbox" />
+                            <span>Remember me</span>
+                        </label>
+                    </p>
+                    <button type="button" id="loginBtn" class="btn btn-primary btn-lg btn-block">Login</button>
+                </form>
+            </div>
+            <div id="registerWrapper" class="col-md-6 px-5">
+                <h2 class="text-center mb-4">Register</h2>
+                <form action="" class="px-3" novalidate>
+                    <div class="form-group">
+                        <input class="form-control form-control-lg" type="text" id="registerEmail" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control form-control-lg" type="text" id="registerUsername"
+                            placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control form-control-lg mb-3" type="password" id="registerPassword"
+                            placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control form-control-lg mb-4" type="password" id="registerConfirmPassword"
+                            placeholder="Confirm password">
+                    </div>
+                    <div class="form-group">
+                        <div class="d-flex align-items-center mb-5">
+                            <label for="registerEducation" class="mr-3">Education</label>
+                            <select class="form-control" id="registerEducation">
+                                <option value="0">Choose option :</option>
+                                <option value="1">Primary school</option>
+                                <option value="2">Secondary school</option>
+                                <option value="3">Associate's Degree</option>
+                                <option value="4">Bachelor's Degree</option>
+                                <option value="5">Master's Degree</option>
+                                <option value="6">Doctoral Degree</option>
+                            </select>
                         </div>
                     </div>
-                </div>
+                    <button type="button" id="registerBtn" class="btn btn-primary btn-lg btn-block">Register</button>
+                </form>
             </div>
         </div>
-    </div>
     </div>
     <div id="footer" class="text-center">
         <img src="images/neptune-icon.png" alt="Neptune icon">
@@ -109,7 +147,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
     <script src="js/materialize.js" type="text/javascript"></script>
-    <script src="js/wallpapers.js" type="text/javascript"></script>
+    <script src="js/forum.js" type="text/javascript"></script>
 </body>
 
 </html>
