@@ -130,10 +130,10 @@ function addErrorMessageToElement(element, message) {
     $(element).addClass("input-invalid");
 
     if ($(element).parent().find(".input-invalid-tooltip").length == 0) {
-        var errorTag = document.createElement("p");
-        errorTag.classList.add("input-invalid-tooltip");
+        var errorTag = $("<p></p>");
+        errorTag.addClass("input-invalid-tooltip");
 
-        errorTag.appendChild(document.createTextNode(message));
+        errorTag.append(document.createTextNode(message));
 
         $(element).parent().append(errorTag);
     }

@@ -18,6 +18,16 @@ $(document).ready(function () {
     populateWallpaperGallery();
 
     $("body").scroll("scroll",checkIfEndOfGallery);
+
+    // jQuery plugin - BlueImp gallery
+    document.getElementById('gallery').onclick = function(event) {
+        event = event || window.event
+        var target = event.target || event.srcElement,
+          link = target.src ? target.parentNode : target,
+          options = { index: link, event: event },
+          links = this.getElementsByTagName('a')
+        blueimp.Gallery(links, options)
+      }
 });
 
 function populateWallpaperGallery() {
@@ -36,7 +46,8 @@ function populateWallpaperGallery() {
 function createWallpaperItem (image) {
     var imagePath = `images/wallpapers/${image}`;
 
-    var wallpaperItem = document.createElement("div");
+    var wallpaperItem = document.createElement("a");
+    wallpaperItem.href = imagePath;
     wallpaperItem.classList.add("col-sm-6","col-md-4","mb-4");
 
     var wallpaperItemImage = document.createElement("img");
@@ -60,7 +71,6 @@ function checkIfEndOfGallery() {
                 populateWallpaperGallery();
             },1000);
         }, 50);
-
 }
 function elIsPassedWithOffset(element,offset){
     var boundings = element.getBoundingClientRect();

@@ -61,27 +61,26 @@ $(document).ready(function () {
     }
 
     eventsDataArray = ["event1.jpg;January 3, 4 - Quadrantids Meteor Shower.",
-    "event2.jpg;January 6 - New Moon.",
-    "event3.jpg;January 6 - Venus at Greatest Western Elongation.",
-    "event4.jpg;January 6 - Partial Solar Eclipse.",
-    "event5.jpg;January 21 - Full Moon, Supermoon.",
-    "event6.jpg;January 22 - Conjunction of Venus and Jupiter. ",
-    "event7.jpg;January 20 & 21 - Total Lunar Eclipse.",
-    "event2.jpg;February 4 - New Moon.",
-    "event5.jpg;February 19 - Full Moon, Supermoon.",
-    "event3.jpg;February 27 - Mercury at Greatest Eastern Elongation.",
-    "event2.jpg;March 6 - New Moon."];
+        "event2.jpg;January 6 - New Moon.",
+        "event3.jpg;January 6 - Venus at Greatest Western Elongation.",
+        "event4.jpg;January 6 - Partial Solar Eclipse.",
+        "event5.jpg;January 21 - Full Moon, Supermoon.",
+        "event6.jpg;January 22 - Conjunction of Venus and Jupiter. ",
+        "event7.jpg;January 20 & 21 - Total Lunar Eclipse.",
+        "event2.jpg;February 4 - New Moon.",
+        "event5.jpg;February 19 - Full Moon, Supermoon.",
+        "event3.jpg;February 27 - Mercury at Greatest Eastern Elongation.",
+        "event2.jpg;March 6 - New Moon."];
     eventList = document.getElementById("eventList");
     populateEventList();
-
 });
 
 function populateNewsList(indexArray, numOfItemsShowing, page) {
     $(newsList).empty();
 
-    var startIndex = (page-1) * numOfItemsShowing;
+    var startIndex = (page - 1) * numOfItemsShowing;
     var endIndex = startIndex + numOfItemsShowing;
-    if(endIndex > indexArray.length)
+    if (endIndex > indexArray.length)
         endIndex = indexArray.length;
 
     var animationDelay = 0;
@@ -89,17 +88,17 @@ function populateNewsList(indexArray, numOfItemsShowing, page) {
         let newsListItem = createNewsListItem(newsData[indexArray[i]].split(";")[0], newsData[indexArray[i]].split(";")[1], newsData[indexArray[i]].split(";")[2]);
 
         newsList.appendChild(newsListItem);
-        $(newsListItem).css("opacity","0");
+        $(newsListItem).css("opacity", "0");
 
-        setTimeout(function(){
+        setTimeout(function () {
             $(newsListItem).fadeTo(1000, 1.0);
-        }, animationDelay*50);
+        }, animationDelay * 50);
         animationDelay++;
     }
 }
 function createNewsListItem(img, title, date) {
     var container = document.createElement("div");
-    container.classList.add("col-12","col-sm-6","col-lg-4", "newsListItem","mb-3");
+    container.classList.add("col-12", "col-sm-6", "col-lg-4", "newsListItem", "mb-3");
 
     var dateTag = document.createElement("p");
     dateTag.appendChild(document.createTextNode(`Date : ${date}`));
@@ -154,22 +153,22 @@ function sortArrayOfIndexesByDate(indexArray, datesArray, desc) {
                 }
         }
 }
-function jumpToPage(event){
+function jumpToPage(event) {
     event.preventDefault();
 
     var linkParent = this.parentElement;
-    if(linkParent.classList.contains("active"))
+    if (linkParent.classList.contains("active"))
         return;
 
     var pageNum = parseInt(this.textContent);
     page = pageNum;
-    
+
     populateNewsList(newsDataIndexes, itemsShowingDefault, pageNum);
     updatePaginationArrows();
     updateActivePage();
 
 }
-function nextOrPreviousPage(event){
+function nextOrPreviousPage(event) {
     event.preventDefault();
 
     var linkParent = this.parentElement;
@@ -179,7 +178,7 @@ function nextOrPreviousPage(event){
     var nextPage = page + incrementFor;
     var numOfPages = pagination[0].children.length - 2;
 
-    if(nextPage < 1 || nextPage > numOfPages)
+    if (nextPage < 1 || nextPage > numOfPages)
         return;
 
     populateNewsList(newsDataIndexes, itemsShowingDefault, nextPage);
@@ -194,37 +193,57 @@ function updatePaginationArrows() {
         var childrenCount = pagination[i].children.length;
         pagination[i].children[0].classList.remove("disabled");
         pagination[i].children[childrenCount - 1].classList.remove("disabled");
-        
+
         if (page == 1)
             pagination[i].children[0].classList.add("disabled");
         else if (page == 3)
             pagination[i].children[childrenCount - 1].classList.add("disabled");
     }
 }
-function updateActivePage(){
+function updateActivePage() {
     $(pagination).find("li.active").removeClass("active");
-    for(let i = 0; i < pagination.length; i++)
+    for (let i = 0; i < pagination.length; i++)
         $(pagination[i]).find("li")[page].classList.add("active");
 }
 
-function populateEventList(){
+function populateEventList() {
 
-    for (eventItem of eventsDataArray) {
-        var eventData = eventItem.split(";");
+    var firstItemData = eventsDataArray[0].split(";");
+    $(eventList).append(createEventListItem(firstItemData[0], firstItemData[1]));
+    
+    setTimeout(function () {
+        $(eventList).effect("shake", 1000, function () {
+            for (let i = 1; i < eventsDataArray.length; i++) {
+                var eventData = eventsDataArray[i].split(";");
 
-        var listItem = document.createElement("li");
-        listItem.classList.add("collection-item", "avatar");
+                setTimeout(showEventItemWithEffect, i * 300, eventData);
+            }
+        });
+    }, 1500);
+}
 
-        var listItemImage = document.createElement("img");
-        listItemImage.src = `images/event-icons/${eventData[0]}`;
-        listItemImage.classList.add("circle");
+function createEventListItem(image, text) {
+    var listItem = document.createElement("li");
+    listItem.classList.add("collection-item", "avatar");
 
-        var listItemTitle = document.createElement("span");
-        listItemTitle.appendChild(document.createTextNode(eventData[1]));
+    var listItemImage = document.createElement("img");
+    listItemImage.src = `images/event-icons/${image}`;
+    listItemImage.classList.add("circle");
 
-        listItem.appendChild(listItemImage);
-        listItem.appendChild(listItemTitle);
+    var listItemTitle = document.createElement("span");
+    listItemTitle.appendChild(document.createTextNode(text));
 
-        eventList.appendChild(listItem);
-    }
+    listItem.appendChild(listItemImage);
+    listItem.appendChild(listItemTitle);
+
+    return listItem;
+}
+function showEventItemWithEffect(eventData){
+
+    var listItem = createEventListItem(eventData[0], eventData[1]);
+    listItem.style.display = "none";
+    
+    $(eventList).append(listItem);
+
+    $(listItem).show("bounce", 3000);
 }

@@ -61,7 +61,7 @@ $(document).ready(function () {
     window.addEventListener("resize", function () {
         var stars = $(supernovaSection).children("div");
         for (star of stars)
-            supernovaSection.removeChild(star);
+            $(star).remove();
 
         clearTimeout(supernovaTimeoutTimer);
         supernovaTimeoutTimer = setTimeout(function () {

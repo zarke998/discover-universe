@@ -7,6 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Discover Universe | News</title>
 
+
+    <meta name="author" content="Andrej Zarkovski">
+    <meta name="description" content="Have fun discovering all kinds of effects that happen in the universe. We provide you with most up to date inormation about discoveries that happen in space. News we provide you with are written by highly renown scientists from around the world.">
+    <meta name="keywords" content="discover, universe, space, cosmos, news, events">
+
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/materialize.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
@@ -44,7 +51,7 @@
                     <div class="col-sm-4 col-lg-3 px-0 mySelectWrapper order-2 order-sm-1">
                         <p>Sort by</p>
                         <div class="input-field col s12">
-                            <select id="sortBy">
+                            <select id="sortBy" disabled>
                                 <option value="1">Asc A-Z</option>
                                 <option value="2">Desc Z-A</option>
                                 <option value="3">Date Asc</option>
@@ -66,7 +73,7 @@
                     <div class="col-sm-4 col-lg-3 px-0 mySelectWrapper order-3 order-sm-3">
                         <p>Items</p>
                         <div class="input-field col s12">
-                            <select id="itemsShowing">
+                            <select id="itemsShowing" disabled>
                                 <option value="9">9</option>
                                 <option value="12">12</option>
                                 <option value="15">15</option>
@@ -102,27 +109,26 @@
             <div class="col-sm-6 col-md-2 mt-4">
                 <h4>General</h4>
                 <ul>
-                    <li><a href="#">Sitemap</a></li>
-                    <li><a href="#">RSS</a></li>
+                    <li><a href="sitemap.xml" target="_blank">Sitemap</a></li>
                     <li><a href="documentation.pdf" target="_blank">Documentation</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="about.html">About</a></li>
                 </ul>
             </div>
             <div class="col-sm-6 col-md-2 mt-4">
                 <h4>Socials</h4>
                 <ul>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Youtube</a></li>
-                    <li><a href="#">Twitch</a></li>
+                    <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+                    <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+                    <li><a href="https://youtube.com" target="_blank">Youtube</a></li>
+                    <li><a href="https://twitch.tv" target="_blank">Twitch</a></li>
                 </ul>
             </div>
             <div class="col-sm-6 col-md-2 mt-4">
                 <h4>Website</h4>
                 <ul>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Gallery</a></li>
-                    <li><a href="#">Forum</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="wallpapers.html">Wallpapers</a></li>
+                    <li><a href="forum.html">Forum</a></li>
                 </ul>
             </div>
             <div class="col-sm-6 col-md-2 mt-4">
@@ -147,6 +153,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
     <script src="js/materialize.js" type="text/javascript"></script>
+    <script src="js/jquery-ui.min.js" type="text/javascript"></script>
     <script src="js/news.js" type="text/javascript"></script>
 </body>
 
